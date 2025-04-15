@@ -1,0 +1,632 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e3eb;
+}
+.container {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px 20px 20px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.display {
+  height: 80px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #000e1a;
+  pointer-events: none;
+}
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.buttons button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #eee;
+}
+.buttons button:active {
+  transform: scale(0.99);
+}
+.operator {
+  color: #2f9fff;
+}
+
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e3eb;
+}
+
+/* Container for the calculator */
+.container {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px 20px 20px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Display area */
+.display {
+  height: 80px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #000e1a;
+  pointer-events: none;
+  transition: all 0.3s ease; /* Smooth transition for the display */
+}
+
+/* Buttons layout */
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.buttons button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #eee;
+  transition: transform 0.1s ease, background-color 0.2s ease; /* Button animation */
+}
+
+/* Hover effect for buttons */
+.buttons button:hover {
+  background-color: #ddd;
+  transform: scale(1.1); /* Slightly scale the button on hover */
+}
+
+/* Button click effect (scaling) */
+.buttons button:active {
+  transform: scale(0.95); /* Shrinks when clicked */
+}
+
+/* Operator button color */
+.operator {
+  color: #fff;
+  background-color: #2f9fff;
+}
+
+.operator:active {
+  background-color: #258bc6;
+}
+
+/* Equals button */
+.buttons button[data-value="="] {
+  background-color: #ff7043;
+  color: white;
+  font-weight: 600;
+}
+
+.buttons button[data-value="="]:active {
+  background-color: #ff5722;
+}
+
+/* Bounce effect for pressed keys */
+.buttons button:active {
+  animation: bounce 0.2s ease-in-out;
+}
+
+/* Animation for key bounce */
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+  .container {
+    max-width: 95%;
+  }
+  .display {
+    font-size: 20px;
+  }
+  .buttons button {
+    font-size: 18px;
+    padding: 8px;
+  }
+}
+
+/* Focus effect for buttons */
+.buttons button:focus {
+  outline: 3px solid #2f9fff;
+}
+
+
+
+
+
+
+
+
+
+
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f3f6;
+}
+
+/* Container for the calculator */
+.container {
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Display area with smooth transition */
+.display {
+  height: 80px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #2c3e50;
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+}
+
+/* Button grid layout */
+.buttons {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Buttons common style */
+.buttons button {
+  padding: 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #f1f2f6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Button hover effect */
+.buttons button:hover {
+  background-color: #bdc3c7;
+  transform: translateY(-5px); /* Slight raise effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+}
+
+/* Button press effect */
+.buttons button:active {
+  transform: translateY(2px); /* Button goes down when clicked */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Smaller shadow for pressed effect */
+}
+
+/* Operator button styles */
+.operator {
+  color: #fff;
+  background-color: #3498db;
+  font-weight: bold;
+}
+
+.operator:hover {
+  background-color: #2980b9;
+}
+
+.operator:active {
+  background-color: #2980b9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(2px); /* Slightly down effect */
+}
+
+/* Equals button styling */
+.buttons button[data-value="="] {
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+}
+
+.buttons button[data-value="="]:hover {
+  background-color: #c0392b;
+}
+
+.buttons button[data-value="="]:active {
+  background-color: #c0392b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(2px);
+}
+
+/* Button highlight animation */
+.buttons button:focus {
+  outline: none;
+  animation: focusHighlight 0.3s ease;
+}
+
+/* Animating focus highlight */
+@keyframes focusHighlight {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Display area smooth transition */
+@keyframes displayTransition {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.display {
+  animation: displayTransition 0.5s ease;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+  .container {
+    max-width: 95%;
+    padding: 15px;
+  }
+  
+  .display {
+    font-size: 25px;
+  }
+  
+  .buttons button {
+    font-size: 20px;
+    padding: 15px;
+  }
+}
+
+/* Smooth transition for the entire container */
+.container:hover {
+  transform: translateY(-5px); /* Slightly lift the calculator on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Increase shadow for hover effect */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ecf0f3;
+}
+
+/* Container for the calculator */
+.container {
+  position: relative;
+  max-width: 350px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(50px); /* Start from below */
+  animation: fadeInUp 0.6s ease forwards; /* Fade in animation */
+}
+
+/* Display area with smooth transition */
+.display {
+  height: 80px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #2c3e50;
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  transform-origin: left center; /* Smooth animation origin */
+}
+
+/* Button grid layout */
+.buttons {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Buttons common style */
+.buttons button {
+  padding: 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  background-color: #f4f5f7;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  position: relative; /* For animated effects */
+}
+
+/* Button hover effect */
+.buttons button:hover {
+  background-color: #bdc3c7;
+  transform: translateY(-8px); /* Button raises on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Increased shadow */
+  transition: transform 0.3s ease, background-color 0.2s ease; /* Smooth hover */
+}
+
+/* Button press effect */
+.buttons button:active {
+  transform: translateY(4px); /* Button presses down on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slight shadow for press effect */
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Operator button styles (blue) */
+.operator {
+  color: #fff;
+  background-color: #3498db;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for operator buttons */
+.operator:hover {
+  background-color: #2980b9;
+  transform: translateY(-5px); /* Slight raise on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Press effect for operator buttons */
+.operator:active {
+  background-color: #2980b9;
+  transform: translateY(4px); /* Slight downwards effect when clicked */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Equals button styling (red) */
+.buttons button[data-value="="] {
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button[data-value="="]:hover {
+  background-color: #c0392b;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button[data-value="="]:active {
+  background-color: #c0392b;
+  transform: translateY(4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus animation for buttons */
+.buttons button:focus {
+  outline: none;
+  animation: focusAnimation 0.3s ease;
+}
+
+/* Animation for focus highlight */
+@keyframes focusAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Display area smooth transition */
+@keyframes displayTransition {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.display {
+  animation: displayTransition 0.5s ease-in-out;
+}
+
+/* Fade in effect for the container */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle animation on the screen */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+  .container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .display {
+    font-size: 24px;
+  }
+
+  .buttons button {
+    font-size: 22px;
+    padding: 15px;
+  }
+}
+
+
+
+
+/* Container for the calculator */
+.container {
+  position: relative;
+  max-width: 450px; /* Increased the width here */
+  width: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(50px); /* Start from below */
+  animation: fadeInUp 0.6s ease forwards; /* Fade in animation */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 400px) {
+  .container {
+    max-width: 90%; /* Adjusted for smaller screens */
+    padding: 15px;
+  }
+
+  .display {
+    font-size: 24px;
+  }
+
+  .buttons button {
+    font-size: 22px;
+    padding: 15px;
+  }
+}
+
